@@ -51,8 +51,8 @@ class App extends Component {
     return (
       <div>
         <Helmet
-          title="Perk"
-          meta={[{ property: 'og:site_name', content: 'Perk' }]}
+          title="Ganhoo"
+          meta={[{ property: 'og:site_name', content: 'Ganhoo' }]}
         />
         <MainHeader isLogin={false} />
         <div>

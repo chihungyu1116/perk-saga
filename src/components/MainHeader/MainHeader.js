@@ -9,7 +9,7 @@ export default class MainHeader extends Component {
       <header className={styles.headerContainer}>
         <section className={classNames(styles.header, 'clearfix')}>
           <div className={classNames(styles.brand, 'pull-left')}>
-            <Link to="/">Perk</Link>
+            <Link to="/">Ganhoo</Link>
           </div>
           <div className="pull-right">
             <div className={styles.headerBtns}>

@@ -13,9 +13,10 @@ export default class SearchHeroBox extends Component {
   constructor(props) {
     super(props);
     this.onSearch = this.onSearch.bind(this);
+    this.onTabClick = this.onTabClick.bind(this);
     this.state = {
       keyword: '',
-      type: 'jobs',
+      searchType: 'jobs',
     };
   }
 
@@ -23,11 +24,15 @@ export default class SearchHeroBox extends Component {
 
   }
 
+  onTabClick(searchType) {
+    this.setState({ searchType });
+  }
+
   render() {
-    const { type } = this.state;
+    const { searchType } = this.state;
     let placeholder;
 
-    switch (type) {
+    switch (searchType) {
       case SEARCH_TYPES.JOBS:
         placeholder = 'Enter job title or keywords';
         break;
@@ -44,35 +49,49 @@ export default class SearchHeroBox extends Component {
         break;
     }
 
-    console.log('placeholder', placeholder, type, SEARCH_TYPES.JOBS);
-
     return (
-      <div className="col-sm-6 col-sm-offset-3">
-        <div className={styles.container}>
-          <h3 className={styles.title}>Perk Grows With You</h3>
-          <div className={styles.typesContainer}>
-            <button className={classNames('btn btn-default', styles.typeBtn)}>Jobs</button>
-            <button className={classNames('btn btn-default', styles.typeBtn)}>Companies</button>
-            <button className={classNames('btn btn-default', styles.typeBtn)}>Schools</button>
-            <button className={classNames('btn btn-default', styles.typeBtn)}>Locals</button>
-          </div>
-          <div className="input-group">
-            <input
-              type="text"
-              className={classNames('form-control', 'input-lg')}
-              placeholder={placeholder}
-            />
-            <span className="input-group-btn">
-              <button className="btn btn-lg btn-warning" type="button">
-                <i className="fa fa-search" aria-hidden="true" />
-              </button>
-            </span>
-          </div>
+      <div className={styles.container}>
+        <h3 className={styles.title}>Ganhoo Grows With You</h3>
+        <div className={styles.tabContainer}>
+          <ul className="nav nav-pills">
+            {
+              Object.keys(SEARCH_TYPES).map((key, index) => {
+                const tabValue = SEARCH_TYPES[key];
+                const isActive = tabValue === searchType;
 
-          <div className={styles.infoContainer}>
-
-          </div>
+                return (
+                  <li
+                    key={index}
+                    role="presentation"
+                    onClick={() => this.onTabClick(tabValue)}
+                    className={
+                      classNames({
+                        active: isActive,
+                        [styles.tab]: true,
+                      })
+                    }
+                  >
+                    <a href="#">{tabValue}</a>
+                  </li>
+                );
+              })
+            }
+          </ul>
         </div>
+        <form className="input-group">
+          <input type="hidden" name="searchType" />
+          <input
+            name="searchValue"
+            type="text"
+            className="form-control input-lg"
+            placeholder={placeholder}
+          />
+          <span className="input-group-btn">
+            <button className="btn btn-lg btn-warning" type="button">
+              <i className="fa fa-search" aria-hidden="true" />
+            </button>
+          </span>
+        </form>
       </div>
     );
   }

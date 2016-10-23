@@ -1,0 +1,22 @@
+.container {
+  text-align: left;
+  overflow: auto;
+  background: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+  height: 200px;
+}
+
+.tags {
+  margin-bottom: 20px;
+}
+
+.tag {
+  line-height: 1.75em;
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

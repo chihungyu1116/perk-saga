@@ -50,3 +50,16 @@
   color: #33e0ff;
   background-color: transparent;
 }
+
+.nav-pills > li > a {
+  color: #fff;
+  font-weight: bold;
+}
+
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background: #fff !important;
+  color: rgba(0, 153, 203, .7) !important;
+}

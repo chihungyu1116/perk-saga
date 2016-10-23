@@ -1,3 +1,4 @@
+export CategoryInfo from './CategoryInfo/CategoryInfo';
 export List from './List/List';
 export Login from './Login/Login';
 export Explore from './Explore/Explore';
@@ -7,3 +8,4 @@ export MainHeader from './MainHeader/MainHeader';
 export SearchHero from './SearchHero/SearchHero';
 export SearchHeroBox from './SearchHeroBox/SearchHeroBox';
 export SearchHeroSlides from './SearchHeroSlides/SearchHeroSlides';
+export SignUpModule from './SignUpModule/SignUpModule';
