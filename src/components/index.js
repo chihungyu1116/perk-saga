@@ -3,3 +3,7 @@ export Login from './Login/Login';
 export Explore from './Explore/Explore';
 export User from './User/User';
 export Repo from './Repo/Repo';
+export MainHeader from './MainHeader/MainHeader';
+export SearchHero from './SearchHero/SearchHero';
+export SearchHeroBox from './SearchHeroBox/SearchHeroBox';
+export SearchHeroSlides from './SearchHeroSlides/SearchHeroSlides';

@@ -1,0 +1,43 @@
+.container {
+  border-radius: 5px;
+  background: rgba(0, 153, 204, .7);
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  top: 40px;
+  text-align: center;
+  z-index: 1;
+}
+
+.title {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.typesContainer {
+  padding: 10px;
+}
+
+.typeBtn {
+  color: #fff;
+  background: transparent;
+  border: 0;
+  margin-right: 5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background: #fff;
+    color: rgba(0, 153, 204, .7);
+  }
+}
+
+.infoContainer {
+  background: #fff;
+  border-radius: 5px;
+  height: 200px;
+  margin-top: 10px;
+  padding: 10px;
+}

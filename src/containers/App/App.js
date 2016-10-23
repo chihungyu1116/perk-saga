@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import { Explore } from 'components';
+import { MainHeader } from 'components';
 
 import {
   navigate,
@@ -45,15 +45,17 @@ class App extends Component {
   }
 
   render() {
-    const { children, inputValue } = this.props;
+    const { children } = this.props;
+
+    console.log('children', children);
     return (
-      <div className={styles.app}>
+      <div>
         <Helmet
-          title="React Universal Saga"
-          meta={[{ property: 'og:site_name', content: 'React Universal Saga' }]}
+          title="Perk"
+          meta={[{ property: 'og:site_name', content: 'Perk' }]}
         />
-        <Explore value={inputValue} onChange={this.handleChange} />
-        <div className={styles.content}>
+        <MainHeader isLogin={false} />
+        <div>
           {children}
         </div>
       </div>
@@ -63,7 +65,6 @@ class App extends Component {
 
 App.propTypes = {
   errorMessage: PropTypes.string,
-  inputValue: PropTypes.string.isRequired,
   navigate: PropTypes.func.isRequired,
   updateRouterState: PropTypes.func.isRequired,
   resetErrorMessage: PropTypes.func.isRequired,
@@ -84,7 +85,6 @@ App.propTypes = {
 function mapStateToProps(state) {
   return {
     errorMessage: state.errorMessage,
-    inputValue: state.router.pathname.substring(1)
   };
 }
 

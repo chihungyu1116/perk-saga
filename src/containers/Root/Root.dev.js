@@ -2,7 +2,8 @@ import has from 'lodash/has';
 import React, { Component, PropTypes } from 'react';
 import { Provider } from 'react-redux';
 import { Router, RouterContext } from 'react-router';
-import DevTools from '../DevTools/DevTools';
+// [TODO] disable dev tool for now
+// import DevTools from '../DevTools/DevTools';
 import GoogleAnalytics from 'react-ga';
 
 export default class Root extends Component {
@@ -28,12 +29,14 @@ export default class Root extends Component {
           {type === 'server'
             ? <RouterContext {...renderProps} />
             : <Router history={history} routes={routes} onUpdate={this.onUpdate} />}
-          <DevTools />
+
         </div>
       </Provider>
     );
   }
 }
+
+// <DevTools />
 
 Root.propTypes = {
   store: PropTypes.object.isRequired,
