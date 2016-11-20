@@ -2,8 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import styles from './SignUpModule.scss'; // eslint-disable-line
+import LinkedInLoginButton from '../LinkedIn/buttons/LoginButton.js';
 
-class SignUpCall extends Component {
+class SignUpCTA extends Component {
   static propTypes = {
     children: PropTypes.element.isRequired
   }
@@ -37,19 +38,21 @@ class SignUpModule extends Component {
       <div>
         <h3 className={'text-center'}>Sign up today for Ganhoo. It is free and anonymous.</h3>
         <div className={'row'}>
-          <div className={classNames('col-sm-6', styles.signUpList)}>
-            <SignUpCall>
+          <div className={classNames('col-sm-6', styles.signUpCTA)}>
+            <SignUpCTA>
               <span>Find a job your love. Search for internal referrer.</span>
-            </SignUpCall>
-            <SignUpCall>
+            </SignUpCTA>
+            <SignUpCTA>
               <span>Get information directly from your referrer.</span>
-            </SignUpCall>
-            <SignUpCall>
+            </SignUpCTA>
+            <SignUpCTA>
               <span>Know your potential package of your dream companies</span>
-            </SignUpCall>
+            </SignUpCTA>
           </div>
           <div className="col-sm-6">
-            Linkedin Login and Signup goes here
+            <div className={classNames(styles.signUpButtons)}>
+              <LinkedInLoginButton />
+            </div>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ var precss = require('precss');
 var autoprefixer = require('autoprefixer');
 
 var assetsPath = path.resolve(__dirname, '../static/dist');
+var imagesPath = path.resolve(__dirname, '../static/images');
 var host = (process.env.HOST || 'localhost');
 var port = (+process.env.PORT + 1) || 3001;
 
@@ -102,8 +103,9 @@ module.exports = {
       'src',
       'node_modules'
     ],
-    extensions: ['', '.json', '.js', '.jsx']
+    extensions: ['', '.json', '.js', '.jsx'],
   },
+
   plugins: [
     // hot reload
     new webpack.HotModuleReplacementPlugin(),

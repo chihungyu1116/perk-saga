@@ -1,16 +1,13 @@
 {
-  "name": "react-universal-saga",
-  "description": "Universal React App Starter ft. Redux Saga",
-  "author": "Kawi Xiao <kawixiao@gmail.com> (http://github.com/xkawi)",
-  "version": "1.0.2",
+  "name": "Ganhoo",
+  "description": "Ganhoo, the new way to recruit and connect people",
+  "author": "Chihung Yu",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xkawi/react-universal-saga"
+    "url": "https://github.com/chihungyu1116/perk-saga"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/xkawi/react-universal-saga/issues"
-  },
   "keywords": [
     "react",
     "isomorphic",
@@ -20,8 +17,6 @@
     "hot reloading",
     "react-hot-reloader",
     "redux",
-    "starter",
-    "boilerplate",
     "babel",
     "saga",
     "redux saga"
@@ -111,6 +106,7 @@
     "scroll-behavior": "^0.7.0",
     "serialize-javascript": "^1.1.2",
     "serve-favicon": "^2.3.0",
+    "simple-oauth2": "^1.0.0",
     "url-loader": "^0.5.7",
     "warning": "^3.0.0",
     "webpack-isomorphic-tools": "^2.3.2"
